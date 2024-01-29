@@ -1,0 +1,50 @@
+//main//
+package basic;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Main main=new Main(); 
+				main.test1();
+	}
+	
+public void test1() {
+	MyCalendar cal=new MyCalendar();
+	for(int i=0;i<12;i++) {
+			cal.viewMonth(i+1);
+			System.out.println("\n");
+			
+}
+}
+}
+//logic//
+package basic;
+
+public class MyCalendar {
+
+		public void viewMonth(int month) {
+			System.out.println("\t\t\t"+"2024년"+month+"월");
+			System.out.println("일\t월\t화\t수\t목\t금\t토");
+		int[] lastDays= {31,29,31,30,31,30,31,31,30,31,30,31};
+		int[] spaces= {1,4,5,1,3,6,1,4,0,2,5,0};
+		int space=spaces[month-1];
+		int lastDay=lastDays[month-1];
+		
+
+		for(int j=0;j<space;j++) {
+			System.out.print("\t");
+		}
+		for(int k=0;k<lastDay;k++) {
+			int day=k+1;
+			System.out.print(day+"\t");
+			if((space+day)%7==0) {
+				System.out.println();
+		}
+	
+	}
+	
+	
+
+}
+}
