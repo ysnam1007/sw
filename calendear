@@ -1,0 +1,32 @@
+package basic;
+
+public class MyCalender {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int year=2024;
+		
+		int month=9;
+		
+		
+		System.out.println("\t\t\t"+year+"년"+month+"월");
+		System.out.println("일\t월\t화\t수\t목\t금\t토");
+		int space=4;
+		int lastDay=29;
+		for(int i=0;i<space;i++) {
+			System.out.print("\t");
+		}
+		for(int i=0;i<lastDay;i++) {
+			int day=i+1;
+			System.out.print(day+"\t");
+			if((space+day)%7==0) {
+				System.out.println();
+		}
+	
+	}
+	
+	
+
+}
+}
