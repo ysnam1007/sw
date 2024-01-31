@@ -8,6 +8,6 @@ public class Main {
 
 	public void start() {
 		Service service=new Service();
-		service.test3();
+		service.test3();//1은 윤년평년판별 3은현재시각출력
 	}
 }
